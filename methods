@@ -1,0 +1,67 @@
+package website;
+import java.util.Scanner;
+
+public class methods {
+    Scanner sc = new Scanner(System.in);
+    int price;
+    int persAnz;
+    String geschmack, farben,dekoration;
+    public void personen() {
+        int person;
+        System.out.println("Für wie viele Personen ist der Kuchen ? 10, 15, 20 ?");
+        person = sc.nextInt();
+
+        if (person == 10) {
+            price += 15;
+        } else if (person == 15) {
+            price += 20;
+        } else if (person == 20) {
+            price += 25;
+        }
+        persAnz=person;
+        System.out.println("Neuer Preis: " + price + "EUR");
+        persAnz=person;
+    }
+
+    public void taste() {
+        String s;
+        System.out.println("Welchen Geschmack soll deine Torte haben ? Schoko, Vanille, Erdbeere?");
+        s = sc.next();
+        if  (s.equalsIgnoreCase("Erdbeere")){
+            price +=8;
+            System.out.println("Neuer Preis: " + price + "EUR");
+        }else {
+            price+=5;
+            System.out.println("Neuer Preis: " + price + "EUR");
+        }
+        geschmack=s;
+    }
+
+    public void farbe(){
+        String colour;
+        System.out.println("Welche Farbe soll die Torte haben? Braun, Creme, Rosa?");
+        colour= sc.next();
+        price+=2;
+        farben=colour;
+        System.out.println("Neuer Preis: " + price + "EUR");
+    }
+
+    public void deko(){
+        String dek;
+        System.out.println("Welche Dekoration soll auf die Torte? Glitzer, Konfetti, Blumen?");
+        dek= sc.next();
+        price+=2;
+        dekoration=dek;
+        System.out.println("Neuer Preis: " + price + "EUR");
+    }
+
+    public void zsmFassung(){
+        System.out.println("Danke für ihren Einkauf! Ihre Bestellung:");
+        System.out.println("Anzahl der Personen: " + " " + persAnz);
+        System.out.println("Geschmack: " + " " + geschmack);
+        System.out.println("Farbe: " + " " + farben);
+        System.out.println("Dekoration: " + " " + dekoration);
+        System.out.println("Kosten: " + " " + price + "EUR");
+    }
+
+}
