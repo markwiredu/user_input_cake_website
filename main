@@ -1,0 +1,39 @@
+import website.methods;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Scanner;
+//Attribute
+
+public class mainPaige extends methods {
+
+
+
+
+    
+    public static void main(String[] args) {
+        mainPaige benutzer = new mainPaige();
+        methods meth = new methods();
+
+        System.out.println("Herzlich Willkommen bei Cassy's Cakery ! Freut mich dass du hier bist");
+        benutzer.personen();
+        benutzer.taste();
+        benutzer.farbe();
+        benutzer.deko();
+       benutzer.zsmFassung();
+       printSimpleDateFormat();
+
+
+    }
+
+    //datemethod
+    public static void printSimpleDateFormat() {
+        SimpleDateFormat formatter = new SimpleDateFormat(
+                "yyyy.MM.dd - HH:mm:ss ");
+        Date currentTime = new Date();
+        System.out.println(formatter.format(currentTime));
+
+    }
+
+
+}
